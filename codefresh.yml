@@ -1,0 +1,15 @@
+# Build service with unit tests
+version: '1.0'
+
+  steps:
+    only_on_master:
+      image: node:latest
+      commands:
+        - echo command 1
+        - <---
+            if [ "master" = "CF_BRANCH" ]; then
+                 echo  you are running on master branch
+              else
+                echo  your are running on $CF_BRANCH
+              fi
+            --->
