@@ -1,4 +1,4 @@
-# Build service with unit tests
+# Build service to test pipeline filter
 version: '1.0'
 steps:
     only_on_master:
