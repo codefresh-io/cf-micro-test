@@ -1,4 +1,4 @@
-# Build service to test pipeline filter
+# Build service to test pipeline filter!
 version: '1.0'
 steps:
     only_on_master:
