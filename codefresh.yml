@@ -1,6 +1,6 @@
 # Build service with unit tests
 version: '1.0'
-  steps:
+steps:
     only_on_master:
       image: node:latest
       commands:
