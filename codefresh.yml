@@ -6,9 +6,8 @@ steps:
       commands:
         - echo command 1
         - >-
-            if [ "master" = "CF_BRANCH" ]; then
+            if [ "master" = "CF-BRANCH" ]; then
                  echo  you are running on master branch
               else
-                echo  your are running on $CF_BRANCH
+                echo  your are running on $CF-BRANCH
               fi
-             
