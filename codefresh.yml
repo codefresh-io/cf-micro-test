@@ -3,11 +3,13 @@ version: '1.0'
 steps:
     only_on_master:
       image: node:latest
+      environment :
+        - CF_BRANCH=${{CF_BRANCH}}
       commands:
         - echo command 1
         - >-
-            if [ "master" = "CF-BRANCH" ]; then
+            if [ "master" = $CF_BRANCH ]; then
                  echo  you are running on master branch
               else
-                echo  your are running on $CF-BRANCH
+                echo  your are running on $CF_BRANCH
               fi
